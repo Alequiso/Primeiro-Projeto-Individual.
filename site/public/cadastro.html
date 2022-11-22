@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../app.js">
+    <link rel="stylesheet" href="./js/funcoes.js">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class='image_fundo'>
+          <header>
+            <div class="container">
+              <div class="titulo">
+                <h1><img class="logo" id="" src="./img/Logo_-_Journey.svg.png" width="328px 53px"></h1>
+              </div>
+              <div class="texto">An abstract journey</div>
+              <div class="navegacao">
+                <ul>
+                  <li><a class="cor" href="index.html">Home</a></li>
+                  <li><a class="cor">|</a></li>
+                  <li><a class="cor" href="login.html">Login</a></li>
+                  <li><a class="cor" href="cadastro.html">Cadastro</a></li>
+                  <div class="acessar">
+                  </div>
+                </ul>
+              </div>
+            </div>
+      
+            <main>
+              <section class="banner">
+                <div class="container">
+                  <div class="caixa-formulario">
+                    <h3>Bem vindo, viajante.</h3>
+                    <div class="campo">
+                      <label class="tipo_campo">Nome:</label>
+                    <input id="nome_input" type="text" placeholder="Seu nome">
+                    </div>
+                    <div class="campo">
+                      <label for="email">Email:</label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email_input"
+                        placeholder="email@email.com"
+                      />
+                    </div>
+                    <div class="campo">
+                      <label for="senha">Senha:</label>
+                      <input
+                        type="password"
+                        name="senha"
+                        id="senha_input"
+                        placeholder="*******"
+                      />
+                    </div>
+                    <div class="campo">
+                      <label class="tipo_campo">Confirmacao da Senha:</label>
+                      <input id="confirmacao_senha_input" type="password" placeholder="******">
+                    </div>
+                    <button class="btn" onclick="cadastrar()">cadastrar</button>
+                  </div>
+                  <div id="div_aguardar" class="">
+                    <img src="">
+                </div>
+                <div class="card_erro" id="cardErro">
+                  <span id="mensagem_erro"></span>
+              </div>
+                <div id="div_erros_login">
+                </div>
+              </section>
+            </main>
+          </header>
+</body>
+</html>
+
+<script>
+  function cadastrar() {
+    //  aguardar();
+
+      //Recupere o valor da nova input pelo nome do id
+      // Agora vá para o método fetch logo abaixo
+      var nomeVar = nome_input.value;
+      var emailVar = email_input.value;
+      var senhaVar = senha_input.value;
+      var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+      if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+          cardErro.style.display = "block"
+          mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+          finalizarAguardar();
+          return false;
+      }
+      else {
+          setInterval(sumirMensagem, 5000)
+      }
+
+      // Enviando o valor da nova input
+      fetch("/usuarios/cadastrar", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+              // crie um atributo que recebe o valor recuperado aqui
+              // Agora vá para o arquivo routes/usuario.js
+              nomeServer: nomeVar,
+              emailServer: emailVar,
+              senhaServer: senhaVar,
+              senhaconfirmacaoServer: confirmacaoSenhaVar
+          })
+      }).then(function (resposta) {
+
+          console.log("resposta: ", resposta);
+
+          if (resposta.ok) {
+              cardErro.style.display = "block";
+
+              mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+              setTimeout(() => {
+                  window.location = "login.html";
+              }, "2000")
+              
+              limparFormulario();
+              finalizarAguardar();
+          } else {
+              throw ("Houve um erro ao tentar realizar o cadastro!");
+          }
+      }).catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+          finalizarAguardar();
+      });
+
+      return false;
+  }
+
+  function sumirMensagem() {
+      cardErro.style.display = "none"
+  }
+
+</script>

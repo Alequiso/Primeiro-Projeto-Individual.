@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="./css/loguin.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./../app.js">
+  <link rel="stylesheet" href="./js/">
+  <title>Journey | Login</title>
+</head>
+
+<body>
+  <header>
+    <div class='image_fundo'>
+      <header>
+        <div class="container">
+          <div class="titulo">
+            <h1><img class="logo" id="" src="./img/Logo_-_Journey.svg.png" width="328px 53px"></h1>
+          </div>
+          <div class="texto">An abstract journey</div>
+          <div class="navegacao">
+            <ul>
+              <li><a class="cor" href="index.html">Home</a></li>
+              <li><a class="cor">|</a></li>
+              <li><a class="cor" href="login.html">Login</a></li>
+              <li><a class="cor" href="cadastro.html">Cadastro</a></li>
+              <div class="acessar">
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <main>
+          <section class="banner">
+            <div class="container">
+              <div class="caixa-formulario">
+                <h3>Bem vindo novamente, viajante.</h3>
+                <br>
+                <div class="campo">
+                  <label for="email">Email:</label>
+                  <input type="email" name="email" id="email_input" placeholder="email@email.com" />
+                </div>
+                <div class="campo">
+                  <label for="senha">Senha:</label>
+                  <input type="password" name="senha" id="senha_input" placeholder="*******" />
+                </div>
+                <button class="btn" onclick="entrar()" >Enviar</button>
+              </div>
+              <div id="div_aguardar" class="">
+                <img src="">
+              <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <div class="container">
+            <p>Alexsandro Leite - Projeto Individual; SPTech &copy; 2022</p>
+          </div>
+        </footer>
+      </header>
+</body>
+
+</html>
+
+<script>
+
+
+  function entrar() {
+     // aguardar();
+
+      var emailVar = email_input.value;
+      var senhaVar = senha_input.value;
+
+      if (emailVar == "" || senhaVar == "") {
+          cardErro.style.display = "block"
+          mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+          finalizarAguardar();
+          return false;
+      }
+      else {
+          setInterval(sumirMensagem, 5000)
+      }
+
+      console.log("FORM LOGIN: ", emailVar);
+      console.log("FORM SENHA: ", senhaVar);
+
+      fetch("/usuarios/autenticar", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+              emailServer: emailVar,
+              senhaServer: senhaVar
+          })
+      }).then(function (resposta) {
+          console.log("ESTOU NO THEN DO entrar()!")
+
+          if (resposta.ok) {
+              console.log(resposta);
+
+              resposta.json().then(json => {
+                  console.log(json);
+                  console.log(JSON.stringify(json));
+
+                  sessionStorage.EMAIL_USUARIO = json.email;
+                  sessionStorage.NOME_USUARIO = json.nome;
+                  sessionStorage.ID_USUARIO = json.id;
+
+                  setTimeout(function () {
+                      window.location = "./Interacao.html";
+                  }, 1000); // apenas para exibir o loading
+
+              });
+
+          } else {
+
+              console.log("Houve um erro ao tentar realizar o login!");
+
+              resposta.text().then(texto => {
+                  console.error(texto);
+                  finalizarAguardar(texto);
+              });
+          }
+
+      }).catch(function (erro) {
+          console.log(erro);
+      })
+
+      return false;
+  }
+
+  function sumirMensagem() {
+      cardErro.style.display = "none"
+  }
+
+</script>

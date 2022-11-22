@@ -1,0 +1,305 @@
+@font-face {
+    font-family: 'Journey';
+    src: url('../font/JourneyPS3.ttf') format('opentype');
+}
+
+body {
+    justify-content: center;
+    background-color: #cea392;
+}
+
+.image_fundo {
+    background-image: url("../img/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Journey', sans-serif;
+}
+
+body {
+    font-size: 80%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container {
+    font-size: 40px;
+    padding: 22px 0px;
+
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navegacao {
+    width: 430px;
+    color: rgb(0, 0, 0);
+}
+
+.navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+.navegacao ul li .cor {
+    color: #542404;
+}
+
+.acessar button {
+    border: none;
+    padding: 10px 10px;
+    border-radius: 50px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(253, 253, 253);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.acessar button:hover,
+.acessar button.active {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+main .textointroducao:hover, img:hover {
+    scale: 30px;
+    transform: scale(1.15);
+    transition: 0.6s;
+}
+
+.navegacao ul li:hover,header .logo:hover{
+    scale: 25px;
+    transform: scale(1.15);
+    transition: 0.6s;
+}
+
+header .texto:hover {
+    scale: 25px;
+    transform: scale(1.15);
+    transition: 0.6s;
+}
+
+video:hover {
+    scale: 2px;
+    transform: scale(1.15);
+    transition: 0.6s;
+}
+
+header .logo:hover {
+    scale: 25px;
+    transform: scale(1.15);
+    transition: 0.6s;
+}
+
+main .cleiton {
+    background-image: url(./img/711435.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header .texto {
+    color: #8c6435;
+    text-align: center;
+}
+
+main .textointroducao {
+    margin-top: 20px;
+    text-align: center;
+    /* align-items: center; */
+    font-size: 22px;
+}
+
+h1 .maiusculo {
+    font-size: 55px;
+}
+
+main .textosub {
+
+    justify-content: center;
+    text-align: center;
+}
+
+main .textosub1 {
+    margin-top: 90px;
+    justify-content: center;
+    text-align: center;
+}
+
+.nova {
+
+    background-image: url(./img/journey2_ggv8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+video,
+audio {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 350px;
+}
+
+audio {
+    opacity: 50%;
+}
+
+main .titulo2 {
+    margin-bottom: 50px;
+    margin-top: 150px;
+    text-align: center;
+    /* align-items: center; */
+    /* var dentro do js e dps no div */
+    font-size: 50px;
+}
+
+main .titulo3 {
+    text-align: center;
+    /* align-items: center; */
+    /* var dentro do js e dps no div */
+    font-size: 25px;
+}
+
+main .cortitulo3 {
+    color: #8c6435;
+}
+
+main {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main .game {
+    margin-left: 50px;
+    width: 200px;
+    background-color: white;
+    justify-content: center;
+}
+
+main .textotitulo2 {
+    margin-left: 50px;
+    text-align: center;
+    width: 200px;
+    background-color: white;
+    justify-content: center;
+}
+
+main .pngpersonagem {
+    background-color: red;
+    width: 200px;
+}
+
+main .personagem {
+    margin: 0px 5000px 500px 0px;
+    width: 350px;
+}
+
+.social {
+    margin: 50px 0;
+}
+
+.social .caixas {
+    display: flex;
+}
+
+.caixa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.caixa h4 {
+    margin: 15px 0;
+    color: #faedf2;
+}
+
+.caixa p {
+    text-align: center;
+}
+
+.caixa img {
+    width: 250px;
+}
+
+main .personagem {
+    justify-content: center;
+    text-align: center;
+    color: #8c6435;
+}
+section {justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.textcritic {
+    margin-left: 150px;
+    width: 305px;
+    color: whitesmoke;
+  border: 2px solid black;
+}
+.textcritic2 {
+    margin-top: -200px;
+    margin-left: 455px;
+    align-items: center;
+    width: 385px;
+    color: whitesmoke;
+  border: 2px solid black;
+}
+
+.textcritic3 {
+    -webkit-box-shadow: 40px 101px 104px 0px rgba(0,0,0,0.44);
+-moz-box-shadow: 40px 101px 104px 0px rgba(0,0,0,0.44);
+box-shadow: 40px 101px 104px 0px rgba(0,0,0,0.44);
+    margin-top: -200px;
+    margin-left: 840px;
+    justify-content: center;
+    width:305px;
+    color: whitesmoke;
+  border: 2px solid black;
+}
+
+section .imgcenarios{
+    width: 140px;
+    border-radius: 25px 0 25px 25px;
+}
+section .imgcenarios:hover{-webkit-box-shadow: 40px 101px 104px 0px rgba(0,0,0,0.44);
+    -moz-box-shadow: 40px 101px 104px 0px rgba(0,0,0,0.44);
+    box-shadow: 40px 101px 104px 0px rgba(0,0,0,0.44);
+    border-radius: 25px 0 25px 25px;
+}
+footer {
+    padding: 45px 0;
+  }
+  
+  footer .container {
+    justify-content: center;
+  }
+  
+  footer p {
+    color: #fff;
+  }
+.cenarios {
+    justify-content: center;
+    border-radius: 25px 0 25px 0;
+}

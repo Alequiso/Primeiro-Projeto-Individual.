@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../Site/css/interacao.css">
+  <link rel="stylesheet" href="../../../Aquatech/web-data-viz/site/public/dashboard/dashboards.css">
+  <link rel="stylesheet" href="../../../Aquatech/web-data-viz/site/public/css/style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class='imagem_fundo'>
+    <header>
+      <div class="container">
+        <div class="texto">Mural de Experiencias</div>
+
+        <div class="navegacao">
+          <div class="acessar">
+            <button><a class="cor" href="cadastro.html">Sair</a></button>
+          </div>
+        </div>
+      </div>
+
+    </header>
+    <div class="paragrafo">
+      <div class="container2">
+        <p>Veja experiencias de outros jogadores e caso se sinta avontade compartilhe a sua </p>
+      </div>
+    </div>
+  
+
+
+   
+    <div class="dash-right">
+
+        <div class="avisos">
+            <div class="container">
+                <h1>Publicar experiencia:</h1>
+                <div class="div-form">
+                    <form id="form_postagem" method="post" onsubmit="return publicar()">
+                        <label>
+                            Título:
+                            <br>
+                            <input name="titulo" id="titulo" maxlength="100" type="text">
+                        </label>
+                        <br>
+                        <label>
+                            Descrição (máximo de 250 caracteres):
+                            <br>
+                            <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                        </label>
+                        <br>
+                        <button>Enviar</button>
+                    </form>
+                </div>
+                <h1>Mural das Experiencias</h1>
+                <div class="div-results">
+                    <div id="feed_container" class="feed-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
