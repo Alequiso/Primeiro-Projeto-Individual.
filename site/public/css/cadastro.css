@@ -2,7 +2,21 @@
     font-family: 'Journey';
     src: url('../font/JourneyPS3.ttf') format('opentype');
 }
-
+ /* Scrollbar */ 
+ ::-webkit-scrollbar {
+  width: 19px;
+  width: 19px;
+}
+*::-webkit-scrollbar-track {
+  background-color: #CEA392;
+  border: 8px double #FFFFFF;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: #8C6435;
+  border: 3px solid #FFFFFF;
+}
+/* Scrollbar */ 
 body {
     justify-content: center;
     background-color: #cea392;

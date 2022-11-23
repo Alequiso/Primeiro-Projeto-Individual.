@@ -8,7 +8,7 @@ setInterval(function(){
 
 function nextImage() {
     contador++;
-    if(contador >4) {
+    if(contador >6) {
         contador = 1;
     }
     document.getElementById("radio"+contador).checked = true;

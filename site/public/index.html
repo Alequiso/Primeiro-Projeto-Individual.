@@ -35,7 +35,7 @@
       </div>
 
     </header>
-    
+
     <main>
 
 
@@ -118,19 +118,24 @@
         <br>
         <section id="musicas" class="musicas">
           <div class="container">
-              <h1>Descubra uma musica da trilha sonora de Journey</h1>
-              <h3>
-                "Um grande concerto para violoncelo onde você é o solista e todos os outros instrumentos representam o mundo ao seu redor" - Alexsandro Leite <br>
-               </h3>
-              <div class="caixaSort">
-                  <span>Clique e descubra:</span>
-                  <button onclick="sort()">Sortear</button>
-                  <div id="randommusic">
-                  </div>
+            <h1 class="h1musica">Descubra uma musica da trilha sonora de Journey</h1>
+            <h3>
+              "Um grande concerto para violoncelo onde você é o solista e todos os outros instrumentos representam o
+              mundo ao seu redor" - Alexsandro Leite <br>
+            </h3>
+            <div class="caixaSort">
+              <div class='span'>Clique e descubra:
+              <button onclick="desc()">Descobrir</button>  
               </div>
+              
+              
+            </div>
           </div>
-      </section>
-        <h1 class="titulo2">Screenshots:</h1>
+          <div id="randommusic">
+              </div>
+        </section>
+<br>
+        <span class="titulo2">Screenshots:</h1>
 
         <div class="slider">
 
@@ -200,11 +205,12 @@
 </body>
 
 </html>
-
+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
 <script>
-  function sort() {
-var sortestilos = ['<img src="./img/baixados (2).jpeg" width="200" height="200">','<audio src="./font/01_Nascence.mp3" controls autoplay loop="3"></audio>','Operator','Phantom','Vandal','Spectre'];
-var numsort = Number(Math.random() * 4).toFixed();
-randommusic.innerHTML = `${sortestilos[numsort]}`;
-}
+  function desc() {
+    var sortestilos = ['<audio src="./font/15 Reclamation.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/01_Nascence.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/18 I was Born for This.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/17 Apotheosis.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/16 Nadir.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/11 Fifth Confluence.mps3" controls autoplay loop="3"></audio>'];
+    var numsort = Number(Math.random() * 4).toFixed();
+    randommusic.innerHTML = `${sortestilos[numsort]}`;
+  }
+
 </script>
