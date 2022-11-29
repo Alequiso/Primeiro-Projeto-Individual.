@@ -30,6 +30,7 @@ body {
 }
 
 * {
+    text-align: center;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -47,7 +48,6 @@ body {
 header .container {
     font-size: 40px;
     padding: 22px 0px;
-
 }
 
 .container {
@@ -144,7 +144,6 @@ h1 .maiusculo {
 }
 
 main .textosub {
-
     justify-content: center;
     text-align: center;
 }
@@ -155,16 +154,7 @@ main .textosub1 {
     text-align: center;
 }
 
-.nova {
-
-    background-image: url(./img/journey2_ggv8.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
-video,
-audio {
+video{
     margin-top: 20px;
     align-items: center;
     justify-content: center;
@@ -173,13 +163,9 @@ audio {
     width: 350px;
 }
 
-audio {
-    opacity: 50%;
-}
-
 main .titulo2 {
     margin-bottom: 50px;
-    margin-top: 150px;
+    margin-top: 50px;
     text-align: center;
     /* align-items: center; */
     /* var dentro do js e dps no div */
@@ -218,16 +204,6 @@ main .textotitulo2 {
     justify-content: center;
 }
 
-main .pngpersonagem {
-    background-color: red;
-    width: 200px;
-}
-
-main .personagem {
-    margin: 0px 5000px 500px 0px;
-    width: 350px;
-}
-
 .social {
     margin: 50px 0;
 }
@@ -261,7 +237,9 @@ main .personagem {
     text-align: center;
     color: #8c6435;
 }
-section {justify-content: center;
+
+section {
+    justify-content: center;
     justify-items: center;
     align-items: center;
 }
@@ -271,7 +249,7 @@ section {justify-content: center;
     width: 305px;
     height: 200px;
     color: whitesmoke;
-  border: 2px solid black;
+    border: 2px solid black;
 }
 .textcritic2 {
     margin-top: -200px;
@@ -279,18 +257,17 @@ section {justify-content: center;
     align-items: center;
     width: 385px;
     color: whitesmoke;
-  border: 2px solid black;
+    border: 2px solid black;
 }
 
 .textcritic3 {
-    
     margin-top: -200px;
     margin-left: 840px;
     justify-content: center;
     width:400px;
     height: 200px;
     color: whitesmoke;
-  border: 2px solid black;
+    border: 2px solid black;
 }
 
 section .imgcenarios{
@@ -300,15 +277,16 @@ section .imgcenarios{
 
 footer {
     padding: 45px 0;
-  }
+}
   
-  footer .container {
+footer .container {
     justify-content: center;
-  }
+}
   
-  footer p {
+footer p {
     color: #fff;
-  }
+}
+
 .cenarios {
     justify-content: center;
     border-radius: 25px 0 25px 0;
@@ -328,6 +306,23 @@ footer {
     padding: 05px 20px;
     border-radius: 10px;
     border: 2px solid #000000;
-    background: #ffffff; }
+    background: #ffffff; 
+}
 
-    .div_imagens {background-color: #000000;}
+.imagens_avaliacao {
+     height: 300px;
+    text-align: center;
+    color: #8c6435 !important;
+    font-size: 29px;
+    border-radius: 70px;
+    border: 3px solid #000000;
+    background: #ffffff;
+}
+
+.h1{
+    color: rgb(0, 0, 0);
+}
+
+.p{
+    font-size: 22px;
+}

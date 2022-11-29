@@ -150,7 +150,6 @@ header .texto {
   }
   
   .campo {
-    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -158,7 +157,7 @@ header .texto {
   }
   
   .campo label {
-    color:#542404;
+    color:#8c6435;
     font-size: 20px;
     padding: 10px 0;
   }
@@ -166,7 +165,7 @@ header .texto {
   .campo input {
     padding: 10px;
     border-radius: 10px;
-    border: 2px solid #fcf51e;
+    border: 2px solid #8c6435;
   }
   
   .caixa-formulario button {

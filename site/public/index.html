@@ -13,6 +13,7 @@
 
 
 </head>
+<!-- nav-bar -->
 
 <body onload="atualizarFeed()">
   <div class='image_fundo'>
@@ -33,16 +34,15 @@
           </ul>
         </div>
       </div>
+      <!-- nav-bar -->
 
     </header>
-
     <main>
 
-
+      <!-- introdução -->
       <h1 class="textointroducao">
         <span class="maiusculo"> D</span>escubra uma experiencia abstrata e instrospectiva.
       </h1>
-
 
       <h4 class="textosub"> Journey e um jogo que tem como intuito <br> ser uma experiencia imersiva <br>
         atraves
@@ -55,9 +55,9 @@
       <video src="./font/Journey™_Launch Trailer.mp4" autoplay muted looping width="100px 100px"></video> <br>
 
       <h1 class="titulo2"> Sobre Journey: </h1>
+      <!-- introdução -->
 
-
-
+      <!-- about the game -->
       <div class="social">
         <div class="container">
           <div id class="caixas">
@@ -75,11 +75,12 @@
               <p>Pode ser que durante a sua jornada voce encontre outro jogador. Um estranho, desconhecido, qual nem seu
                 nome podera saber. E a unica forma de comunicacao que estara disponivel sao notas musicais.</p>
             </div>
-
           </div>
         </div>
       </div>
+      <!-- about the game -->
 
+      <!-- Criticas sobre o jogo -->
       <div class="critic">
 
         <div class="textcritic"><img src="./img/1280px-Metacritic_logo.svg.png" width="255px">
@@ -100,6 +101,9 @@
           </h3>
         </div>
       </div>
+      <!-- Criticas sobre o jogo -->
+
+      <!-- Cenarios about the game -->
 
       <h1 class="titulo2">Cenarios:</h1>
 
@@ -115,85 +119,87 @@
           <img class="imgcenarios" src="./img/Cenarios/retangulo8.jpg" alt="">
           <img class="imgcenarios" src="./img/Cenarios/ultimo.jpg" alt="">
         </div>
+        <!-- Cenarios about the game -->
+
         <br>
+
+        <!-- Vetor -->
         <section id="musicas" class="musicas">
           <div class="container">
             <h1 class="h1musica">Descubra uma musica da trilha sonora de Journey</h1>
             <h3>
               "Um grande concerto para violoncelo onde voce e o solista e todos os outros instrumentos representam o
-              mundo ao seu redor" - Alexsandro Leite <br>
+              mundo ao seu redor" - Alexsandro <br>
             </h3>
             <div class="caixaSort">
               <div class='span'>Clique e descubra:
-              <button onclick="desc()">Descobrir</button>  
+                <button onclick="descobrir()">Descobrir</button>
               </div>
-              
-              <a href=""></a>
             </div>
           </div>
-          <div id="randommusic">
-              </div>
+          <div id="mostrarmusica">
+          </div>
         </section>
-<br>
-        <span class="titulo2">Screenshots:</h1>
-
-        <div class="slider">
-
-
-          <div class="slides">
-            <!-- inputs-->
-            <input type="radio" nome="radio-btn" id="radio1">
-            <input type="radio" nome="radio-btn" id="radio2">
-            <input type="radio" nome="radio-btn" id="radio3">
-            <input type="radio" nome="radio-btn" id="radio4">
-            <input type="radio" nome="radio-btn" id="radio5">
-            <input type="radio" nome="radio-btn" id="radio6">
-            <!-- inputs-->
-
-            <!-- imagens-->
-            <div class="slide first">
-              <img src="./img/baixados (1).jpeg" alt="">
-            </div>
-            <div class="slide">
-              <img src="./img/baixados (2).jpeg" alt="">
-            </div>
-            <div class="slide">
-              <img src="./img/baixados (3).jpeg" alt="">
-            </div>
-            <div class="slide">
-              <img src="./img/journey1.jpg" alt="">
-            </div>
-            <div class="slide">
-              <img src="./img/baixados (5).jpeg" alt="">
-            </div>
-            <div class="slide">
-              <img src="./img/baixados1.jpeg" alt="">
-            </div>
-            <!-- imagens-->
-
-            <!-- navigation-->
-            <div class="navigation-auto">
-              <div class="auto-btn1"></div>
-              <div class="auto-btn2"></div>
-              <div class="auto-btn3"></div>
-              <div class="auto-btn4"></div>
-              <div class="auto-btn5"></div>
-              <div class="auto-btn6"></div>
-            </div>
-            <!-- navigation-->
-          </div>
-
-          <div class="manual-navigation">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
-            <label for="radio5" class="manual-btn"></label>
-            <label for="radio6" class="manual-btn"></label>
-          </div>
-        </div>
+        <!-- Vetor -->
         <br>
-        <div class="div_imagens" id="div_imagens"></div>
+
+        <span class="titulo2">Screenshots:</h1>
+          <div class="slider">
+            <div class="slides">
+
+              <input type="radio" nome="radio-btn" id="radio1">
+              <input type="radio" nome="radio-btn" id="radio2">
+              <input type="radio" nome="radio-btn" id="radio3">
+              <input type="radio" nome="radio-btn" id="radio4">
+              <input type="radio" nome="radio-btn" id="radio5">
+              <input type="radio" nome="radio-btn" id="radio6">
+
+              <div class="slide first">
+                <img src="./img/baixados (1).jpeg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./img/baixados (2).jpeg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./img/baixados (3).jpeg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./img/journey1.jpg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./img/baixados (5).jpeg" alt="">
+              </div>
+              <div class="slide">
+                <img src="./img/baixados1.jpeg" alt="">
+              </div>
+
+              <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+                <div class="auto-btn6"></div>
+              </div>
+
+            </div>
+
+            <div class="manual-navigation">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+              <label for="radio3" class="manual-btn"></label>
+              <label for="radio4" class="manual-btn"></label>
+              <label for="radio5" class="manual-btn"></label>
+              <label for="radio6" class="manual-btn"></label>
+            </div>
+          </div>
+          <br>
+          <div class="imagens_avaliacao">
+            <h3 class="h1">Avaliacao dos Usuarios:</h3>
+            <p class="p">Metrica atualizada conforme voce usuario classifica o site e sua experiencia com o mesmo.</p>
+            <div class="div_imagens" id="div_imagens">
+            </div>
+          </div>
       </section>
     </main>
 
@@ -208,130 +214,130 @@
 </html>
 
 <script>
-  function desc() {
-    var sortestilos = ['<audio src="./font/15 Reclamation.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/01_Nascence.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/18 I was Born for This.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/17 Apotheosis.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/16 Nadir.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/11 Fifth Confluence.mps3" controls autoplay loop="3"></audio>'];
-    var numsort = Number(Math.random() * 4).toFixed();
-    randommusic.innerHTML = `${sortestilos[numsort]}`;
+  // VETOR //
+  function descobrir() {
+    var vetor = ['<audio src="./font/15 Reclamation.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/01_Nascence.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/18 I was Born for This.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/17 Apotheosis.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/16 Nadir.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/11 Fifth Confluence.mps3" controls autoplay loop="3"></audio>'];
+    var aleatorizar = Number(Math.random() * 2).toFixed();
+    mostrarmusica.innerHTML = `${vetor[aleatorizar]}`;
   }
-
+  // VETOR //
+  // ANALYTICS //
   function atualizarFeed() {
-        //aguardar();
-        fetch("/avisos/avaliacao").then(function (resposta) {
-            if (resposta.ok) {
+    //aguardar();
+    fetch("/avisos/avaliacao").then(function (resposta) {
+      if (resposta.ok) {
 
-                resposta.json().then(function (resposta) {
-                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+        resposta.json().then(function (resposta) {
+          console.log("Dados recebidos: ", JSON.stringify(resposta));
 
-                        var publicacao = resposta[0];
+          var publicacao = resposta[0];
+          {
+            var avaliacao = publicacao.media;
 
+            var estrela_completa = "<img width='220px'  src='./img/avaliacao/journey-the-traveler-512x512.png'/>";
+            var estrela_vazia = "<img src='./img/estrela_cinza.png'/>";
+            var meia_estrela = "<img src='./img/meia_estrela.png'/>";
 
-                        {
-    var avaliacao = publicacao.media;
-
-    var estrela_completa = "<img src='./img/estrela_amarela.png'/>";
-    var estrela_vazia = "<img src='./img/estrela_cinza.png'/>";
-    var meia_estrela = "<img src='./img/meia_estrela.png'/>";
-
-  if (avaliacao < 0.5) {
-      div_imagens.innerHTML = `
+            if (avaliacao < 0.5) {
+              div_imagens.innerHTML = `
                 ${estrela_vazia}
                 ${estrela_vazia}
                 ${estrela_vazia}
                 ${estrela_vazia}
                 ${estrela_vazia}
             `;
-    } else if (avaliacao < 1) {
-      div_imagens.innerHTML = `
+            } else if (avaliacao < 1) {
+              div_imagens.innerHTML = `
             ${meia_estrela}
             ${estrela_vazia}
             ${estrela_vazia}
             ${estrela_vazia}
             ${estrela_vazia}
         `;
-    } else if (avaliacao < 1.5) {
-      div_imagens.innerHTML = `
+            } else if (avaliacao < 1.5) {
+              div_imagens.innerHTML = `
         ${estrela_completa}
         ${estrela_vazia}
         ${estrela_vazia}
         ${estrela_vazia}
         ${estrela_vazia}
       `;
-    } else if (avaliacao < 2) {
-      div_imagens.innerHTML = `
+            } else if (avaliacao < 2) {
+              div_imagens.innerHTML = `
         ${estrela_completa}
         ${meia_estrela}
         ${estrela_vazia}
         ${estrela_vazia}
         ${estrela_vazia}
       `;
-    } else if (avaliacao < 2.5) {
-      div_imagens.innerHTML = `
+            } else if (avaliacao < 2.5) {
+              div_imagens.innerHTML = `
         ${estrela_completa}
         ${estrela_completa}
         ${estrela_vazia}
         ${estrela_vazia}
         ${estrela_vazia}
       `;
-    } else if (avaliacao < 3) {
-      div_imagens.innerHTML = `
+            } else if (avaliacao < 3) {
+              div_imagens.innerHTML = `
       ${estrela_completa}
       ${estrela_completa}
       ${meia_estrela}
       ${estrela_vazia}
       ${estrela_vazia}
       `;
-    } else if (avaliacao < 3.5) {
-      div_imagens.innerHTML = `
+            } else if (avaliacao < 3.5) {
+              div_imagens.innerHTML = `
       ${estrela_completa}
       ${estrela_completa}
       ${estrela_completa}
       ${estrela_vazia}
       ${estrela_vazia}
       `;
-    } else if (avaliacao < 4) {
-      div_imagens.innerHTML = `
+            } else if (avaliacao < 4) {
+              div_imagens.innerHTML = `
       ${estrela_completa}
       ${estrela_completa}
       ${estrela_completa}
       ${meia_estrela}
       ${estrela_vazia}
       `;
-    } else if (avaliacao < 4.5) {
-      div_imagens.innerHTML = `
+            } else if (avaliacao < 4.5) {
+              div_imagens.innerHTML = `
       ${estrela_completa}
       ${estrela_completa}
       ${estrela_completa}
       ${estrela_completa}
       ${estrela_vazia}
       `;
-    } else if (avaliacao < 5) {
-      div_imagens.innerHTML = `
+            } else if (avaliacao < 5) {
+              div_imagens.innerHTML = `
       ${estrela_completa}
       ${estrela_completa}
       ${estrela_completa}
       ${estrela_completa}
       ${meia_estrela}
       `;
-    } else {
-      console.log(publicacao.media)
-      div_imagens.innerHTML = `
-      ${estrela_completa}
-      ${estrela_completa}
-      ${estrela_completa}
-      ${estrela_completa}
-      ${estrela_completa}
-      `;
-    }
-  }
-                    
-                    
-                });
             } else {
-                throw ('Houve um erro na API!');
+              console.log(publicacao.media)
+              div_imagens.innerHTML = `
+      ${estrela_completa}
+      ${estrela_completa}
+      ${estrela_completa}
+      ${estrela_completa}
+      ${estrela_completa}
+      `;
             }
-        }).catch(function (resposta) {
-            console.error(resposta);
-            finalizarAguardar();
+          }
         });
-    }
+      } else {
+        throw ('Houve um erro na API!');
+      }
+    }).catch(function (resposta) {
+      console.error(resposta);
+      finalizarAguardar();
+    });
+  }
+
+  // ANALYTICS //
 </script>

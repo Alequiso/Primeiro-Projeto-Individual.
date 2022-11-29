@@ -50,12 +50,12 @@
                   <input type="password" name="senha" id="senha_input" placeholder="*******" />
                 </div>
                 <div class="campo">
-                  <label class="tipo_campo">Confirmacao da Senha:</label>
+                  <label class="tipo_campo">Confirmacao Senha:</label>
                   <input id="confirmacao_senha_input" type="password" placeholder="******">
                 </div>
                 <div class="campo">
                   <label class="nota">Nota para o Site:</label>
-                  <input id="nota" type="password" placeholder="0 a 5">
+                  <input id="nota" type="number" placeholder="Nota de 0 a 5">
                 </div>
                 <button class="btn" onclick="cadastrar()">cadastrar</button>
               </div>
@@ -68,8 +68,11 @@
               <div id="div_erros_login">
               </div>
           </section>
+          
         </main>
+        
       </header>
+      
 </body>
 
 
@@ -94,8 +97,8 @@
       finalizarAguardar();
       return false;
     }
-    else if (!emailVar.includes("@") || !emailVar.endsWith(".com")) {
-      alert("Por favor, verifique se as credênciais de email estão corretas");
+    else if ( notaVar >5 || !emailVar.includes("@") || !emailVar.endsWith(".com")) {
+      alert("Por favor, verifique se as credênciais de email estão corretas"); alert("Nota para o site deve ser entre 0 e 5")
       return false;
 
     } else if (senhaVar.length <= 7 || senhaVar != confirmacaoSenhaVar) {
