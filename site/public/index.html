@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body onload="atualizarFeed()">
   <div class='image_fundo'>
     <header>
       <div class="container">
@@ -120,7 +120,7 @@
           <div class="container">
             <h1 class="h1musica">Descubra uma musica da trilha sonora de Journey</h1>
             <h3>
-              "Um grande concerto para violoncelo onde você é o solista e todos os outros instrumentos representam o
+              "Um grande concerto para violoncelo onde voce e o solista e todos os outros instrumentos representam o
               mundo ao seu redor" - Alexsandro Leite <br>
             </h3>
             <div class="caixaSort">
@@ -128,7 +128,7 @@
               <button onclick="desc()">Descobrir</button>  
               </div>
               
-              
+              <a href=""></a>
             </div>
           </div>
           <div id="randommusic">
@@ -192,7 +192,8 @@
             <label for="radio6" class="manual-btn"></label>
           </div>
         </div>
-
+        <br>
+        <div class="div_imagens" id="div_imagens"></div>
       </section>
     </main>
 
@@ -205,7 +206,7 @@
 </body>
 
 </html>
-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
+
 <script>
   function desc() {
     var sortestilos = ['<audio src="./font/15 Reclamation.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/01_Nascence.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/18 I was Born for This.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/17 Apotheosis.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/16 Nadir.mp3" controls autoplay loop="3"></audio>', '<audio src="./font/11 Fifth Confluence.mps3" controls autoplay loop="3"></audio>'];
@@ -213,4 +214,124 @@ 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
     randommusic.innerHTML = `${sortestilos[numsort]}`;
   }
 
+  function atualizarFeed() {
+        //aguardar();
+        fetch("/avisos/avaliacao").then(function (resposta) {
+            if (resposta.ok) {
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                        var publicacao = resposta[0];
+
+
+                        {
+    var avaliacao = publicacao.media;
+
+    var estrela_completa = "<img src='./img/estrela_amarela.png'/>";
+    var estrela_vazia = "<img src='./img/estrela_cinza.png'/>";
+    var meia_estrela = "<img src='./img/meia_estrela.png'/>";
+
+  if (avaliacao < 0.5) {
+      div_imagens.innerHTML = `
+                ${estrela_vazia}
+                ${estrela_vazia}
+                ${estrela_vazia}
+                ${estrela_vazia}
+                ${estrela_vazia}
+            `;
+    } else if (avaliacao < 1) {
+      div_imagens.innerHTML = `
+            ${meia_estrela}
+            ${estrela_vazia}
+            ${estrela_vazia}
+            ${estrela_vazia}
+            ${estrela_vazia}
+        `;
+    } else if (avaliacao < 1.5) {
+      div_imagens.innerHTML = `
+        ${estrela_completa}
+        ${estrela_vazia}
+        ${estrela_vazia}
+        ${estrela_vazia}
+        ${estrela_vazia}
+      `;
+    } else if (avaliacao < 2) {
+      div_imagens.innerHTML = `
+        ${estrela_completa}
+        ${meia_estrela}
+        ${estrela_vazia}
+        ${estrela_vazia}
+        ${estrela_vazia}
+      `;
+    } else if (avaliacao < 2.5) {
+      div_imagens.innerHTML = `
+        ${estrela_completa}
+        ${estrela_completa}
+        ${estrela_vazia}
+        ${estrela_vazia}
+        ${estrela_vazia}
+      `;
+    } else if (avaliacao < 3) {
+      div_imagens.innerHTML = `
+      ${estrela_completa}
+      ${estrela_completa}
+      ${meia_estrela}
+      ${estrela_vazia}
+      ${estrela_vazia}
+      `;
+    } else if (avaliacao < 3.5) {
+      div_imagens.innerHTML = `
+      ${estrela_completa}
+      ${estrela_completa}
+      ${estrela_completa}
+      ${estrela_vazia}
+      ${estrela_vazia}
+      `;
+    } else if (avaliacao < 4) {
+      div_imagens.innerHTML = `
+      ${estrela_completa}
+      ${estrela_completa}
+      ${estrela_completa}
+      ${meia_estrela}
+      ${estrela_vazia}
+      `;
+    } else if (avaliacao < 4.5) {
+      div_imagens.innerHTML = `
+      ${estrela_completa}
+      ${estrela_completa}
+      ${estrela_completa}
+      ${estrela_completa}
+      ${estrela_vazia}
+      `;
+    } else if (avaliacao < 5) {
+      div_imagens.innerHTML = `
+      ${estrela_completa}
+      ${estrela_completa}
+      ${estrela_completa}
+      ${estrela_completa}
+      ${meia_estrela}
+      `;
+    } else {
+      console.log(publicacao.media)
+      div_imagens.innerHTML = `
+      ${estrela_completa}
+      ${estrela_completa}
+      ${estrela_completa}
+      ${estrela_completa}
+      ${estrela_completa}
+      `;
+    }
+  }
+                    
+                    
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+            finalizarAguardar();
+        });
+    }
 </script>
