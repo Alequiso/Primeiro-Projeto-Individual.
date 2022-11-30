@@ -1,12 +1,12 @@
-let contador = 1;
+const contador = 1;
 
 document.getElementById("radio1").checked = true;
 
 setInterval(function(){
-    nextImage();
-},2000);
+    proximaimagem();
+},10000);
 
-function nextImage() {
+function proximaimagem() {
     contador++;
     if(contador >6) {
         contador = 1;
